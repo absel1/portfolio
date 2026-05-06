@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abhinav Selvarajan — Engineer who tests, Tester who builds</title>
+<meta name="description" content="Portfolio of Abhinav Selvarajan — QA Engineer & Software Developer. Playwright, Selenium, Java, Spring Boot." />
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./style.css" />
+
+
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-top">
+    <span>Abhinav Selvarajan © 2026</span>
+    <span>Portfolio / v.01</span>
+  </div>
+  <div class="loader-mid">
+    <div class="loader-name">Abhinav<span style="color: var(--accent);">.</span></div>
+    <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+  </div>
+  <div class="loader-bottom">
+    <span>Initialising</span>
+    <span class="loader-counter" id="loaderCount">0</span>
+    <span>Kannur, IN</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-mark">A<span>·</span>S</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-time" id="liveTime">— : —</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+  <!-- Arcade space-shooter scene as full-bleed background -->
+  <div class="orbital" aria-hidden="true">
+    <div class="orb-stage">
+      <div class="stars layer-1"></div>
+      <div class="stars layer-2"></div>
+
+      <div class="life-hud" id="lifeHud" aria-hidden="true">
+        <span class="life-heart" data-life-slot="1">&#10084;</span>
+        <span class="life-heart" data-life-slot="2">&#10084;</span>
+        <span class="life-heart" data-life-slot="3">&#10084;</span>
+        <span class="life-heart" data-life-slot="4">&#10084;</span>
+        <span class="life-heart" data-life-slot="5">&#10084;</span>
+      </div>
+
+      <!-- Enemies descending from top -->
+      <div class="enemy e1">
+        <svg viewBox="0 0 24 24"><path class="body" d="M12 2 L4 8 L4 14 L8 18 L12 14 L16 18 L20 14 L20 8 Z" stroke-width="0.5"/><circle class="eye" cx="12" cy="10" r="2"/></svg>
+      </div>
+      <div class="enemy e2">
+        <svg viewBox="0 0 24 24"><path class="body" d="M12 2 L4 8 L4 14 L8 18 L12 14 L16 18 L20 14 L20 8 Z" stroke-width="0.5"/><circle class="eye" cx="12" cy="10" r="2"/></svg>
+      </div>
+      <div class="enemy e3">
+        <svg viewBox="0 0 24 24"><path class="body" d="M12 2 L4 8 L4 14 L8 18 L12 14 L16 18 L20 14 L20 8 Z" stroke-width="0.5"/><circle class="eye" cx="12" cy="10" r="2"/></svg>
+      </div>
+      <div class="enemy e4">
+        <svg viewBox="0 0 24 24"><path class="body" d="M12 2 L4 8 L4 14 L8 18 L12 14 L16 18 L20 14 L20 8 Z" stroke-width="0.5"/><circle class="eye" cx="12" cy="10" r="2"/></svg>
+      </div>
+
+      <!-- Enemy bullets dropping -->
+      <span class="ebullet eb1"></span>
+      <span class="ebullet eb2"></span>
+      <span class="ebullet eb3"></span>
+      <span class="ebullet eb4"></span>
+      <span class="ebullet eb5"></span>
+
+      <!-- Player + bullets dodging together -->
+      <div class="player-group">
+        <span class="bullet b1"></span>
+        <span class="bullet b2"></span>
+        <span class="bullet b3"></span>
+        <span class="bullet b4"></span>
+        <div class="player">
+          <svg viewBox="0 0 24 28">
+            <path class="hull" d="M12 0 L4 22 L8 20 L8 26 L16 26 L16 20 L20 22 Z" stroke-width="0.5"/>
+            <path class="wing" d="M12 6 L9 18 L15 18 Z"/>
+            <circle class="core" cx="12" cy="14" r="1.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero content sits on top of the scene -->
+  <div class="hero-content">
+    <div class="hero-meta">
+      <div><span>Currently</span><b>QA Engineer @ Mozilor</b></div>
+      <div><span>Based in</span><b>Kannur, Kerala — IN</b></div>
+      <div><span>Available for</span><b>Full-time / Contract</b></div>
+    </div>
+
+    <h1 class="hero-headline">
+      <span class="line"><span>Engineer who <span class="it">tests.</span></span></span>
+      <span class="line"><span>Tester who <span class="it">builds.</span></span></span>
+      <span class="line"><span>Both, <span class="ampersand">&</span> proud of it.</span></span>
+    </h1>
+
+    <div class="hero-bottom">
+      <div class="hero-tag">Open to opportunities — 2026</div>
+      <p class="hero-blurb">
+        I write code <em>and</em> I break it. From Spring Boot APIs to Playwright test suites — I sit comfortably on both sides of the build.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>
+      <em class="it">Playwright</em><span class="dot"></span>
+      Selenium<span class="dot"></span>
+      <em class="it">Java</em><span class="dot"></span>
+      Spring Boot<span class="dot"></span>
+      <em class="it">TestNG</em><span class="dot"></span>
+      Postman<span class="dot"></span>
+      <em class="it">JMeter</em><span class="dot"></span>
+      Figma<span class="dot"></span>
+      <em class="it">Generative AI</em><span class="dot"></span>
+    </span>
+    <span>
+      <em class="it">Playwright</em><span class="dot"></span>
+      Selenium<span class="dot"></span>
+      <em class="it">Java</em><span class="dot"></span>
+      Spring Boot<span class="dot"></span>
+      <em class="it">TestNG</em><span class="dot"></span>
+      Postman<span class="dot"></span>
+      <em class="it">JMeter</em><span class="dot"></span>
+      Figma<span class="dot"></span>
+      <em class="it">Generative AI</em><span class="dot"></span>
+    </span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-num">[01] — About</div>
+  <div class="about-grid reveal">
+    <div>
+      <p class="about-eyebrow">A short story</p>
+      <h2 class="about-title">Two minds.<br><span class="it">One craft.</span></h2>
+    </div>
+    <div class="about-body">
+      <p>I'm <span class="underline">Abhinav</span> — a QA Engineer who started as a Java developer and never stopped switching hats. I build with <em>Spring Boot</em>, ship reliable APIs, and design <em>Figma</em> interfaces. Then I put on the other hat and test the hell out of them with <em>Playwright</em>, Selenium and a healthy paranoia.</p>
+      <p>At <em>Mozilor</em>, I write Playwright suites that test plugins across WordPress, Shopify and Wix. At <em>UST Global</em>, I shipped functional and regression coverage that the team relied on. Before all that, I built REST APIs at <em>Maverix Pro</em>.</p>
+      <p>I think the best testers know how code feels from the inside. I think the best developers know exactly how it can break. <em>I want to be both.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- DUAL IDENTITY -->
+<section class="dual" id="dual">
+  <div class="section-num">[02] — Two roles, one person</div>
+  <div class="dual-grid reveal-stagger">
+    <div class="dual-card">
+      <div class="num-bg">01</div>
+      <span class="role">Side A</span>
+      <h3>The <span class="it">Tester</span></h3>
+      <p class="desc">End-to-end automation, plugin testing across CMS platforms, AI-accelerated test design. The kind of QA that catches what the unit tests didn't think to ask.</p>
+      <div class="stack">
+        <span class="chip">Playwright</span>
+        <span class="chip">Selenium</span>
+        <span class="chip">TestNG</span>
+        <span class="chip">Postman</span>
+        <span class="chip">JMeter</span>
+        <span class="chip">LoadRunner</span>
+        <span class="chip">Jira</span>
+        <span class="chip">TestRail</span>
+      </div>
+    </div>
+    <div class="dual-card">
+      <div class="num-bg">02</div>
+      <span class="role">Side B</span>
+      <h3>The <span class="it">Builder</span></h3>
+      <p class="desc">REST APIs, Spring Boot services, MVC architecture, and clean Figma flows. I design the thing, ship the thing, then come back and test it from the other side.</p>
+      <div class="stack">
+        <span class="chip">Java 17</span>
+        <span class="chip">Spring Boot</span>
+        <span class="chip">Spring MVC</span>
+        <span class="chip">REST APIs</span>
+        <span class="chip">MySQL</span>
+        <span class="chip">Maven</span>
+        <span class="chip">Figma</span>
+        <span class="chip">Git</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="section-num">[03] — Where I've worked</div>
+  <div class="work-list reveal-stagger">
+    <a class="work-item" href="#">
+      <span class="work-num">/01</span>
+      <div class="work-company"><span class="it">Mozilor</span> Technologies</div>
+      <div class="work-role">QA Engineer building Playwright automation suites for plugin ecosystems across WordPress, Shopify and Wix. Pushing AI-assisted test design into daily flow.</div>
+      <div class="work-meta">
+        <span class="role-tag">QA · Automation</span>
+        <span class="work-date">Nov 2025 — Present</span>
+      </div>
+    </a>
+    <a class="work-item" href="#">
+      <span class="work-num">/02</span>
+      <div class="work-company">UST <span class="it">Global</span></div>
+      <div class="work-role">Software Tester. Designed functional, regression and exploratory test cases. Worked Agile, ran Jira-driven defect cycles, partnered tightly with developers.</div>
+      <div class="work-meta">
+        <span class="role-tag">QA · Manual</span>
+        <span class="work-date">Mar 2024 — Oct 2025</span>
+      </div>
+    </a>
+    <a class="work-item" href="#">
+      <span class="work-num">/03</span>
+      <div class="work-company"><span class="it">Maverix</span> Pro</div>
+      <div class="work-role">Java intern building REST APIs across modules using Spring Boot and Spring MVC. Wired up MySQL persistence, Maven builds, and clean MVC integration.</div>
+      <div class="work-meta">
+        <span class="role-tag">Dev · Backend</span>
+        <span class="work-date">Jul 2023 — Jan 2024</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills-section">
+  <div class="section-num">[04] — Skills, broken down</div>
+  <div class="skills-grid reveal-stagger">
+
+    <div class="skill-cat">
+      <div class="skill-cat-head">
+        <span class="skill-cat-name">Test Automation</span>
+        <span class="skill-cat-num">/01</span>
+      </div>
+      <ul class="skill-list">
+        <li>Playwright <span><span class="lvl">expert</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i></span></span></li>
+        <li>Selenium <span><span class="lvl">advanced</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>TestNG <span><span class="lvl">advanced</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>Postman <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+      </ul>
+    </div>
+
+    <div class="skill-cat">
+      <div class="skill-cat-head">
+        <span class="skill-cat-name">Backend &amp; APIs</span>
+        <span class="skill-cat-num">/02</span>
+      </div>
+      <ul class="skill-list">
+        <li>Java <span><span class="lvl">advanced</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>Spring Boot <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>REST APIs <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>MySQL <span><span class="lvl">solid</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i><i class="bar"></i></span></span></li>
+      </ul>
+    </div>
+
+    <div class="skill-cat">
+      <div class="skill-cat-head">
+        <span class="skill-cat-name">Performance</span>
+        <span class="skill-cat-num">/03</span>
+      </div>
+      <ul class="skill-list">
+        <li>JMeter <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>LoadRunner <span><span class="lvl">solid</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i><i class="bar"></i></span></span></li>
+        <li>Load Modeling <span><span class="lvl">solid</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i><i class="bar"></i></span></span></li>
+        <li>Bottleneck Analysis <span><span class="lvl">solid</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i><i class="bar"></i></span></span></li>
+      </ul>
+    </div>
+
+    <div class="skill-cat">
+      <div class="skill-cat-head">
+        <span class="skill-cat-name">Design &amp; Tooling</span>
+        <span class="skill-cat-num">/04</span>
+      </div>
+      <ul class="skill-list">
+        <li>Figma <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>Git / Bitbucket <span><span class="lvl">advanced</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>Jira / TestRail <span><span class="lvl">advanced</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>IntelliJ / Cursor <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+      </ul>
+    </div>
+
+    <div class="skill-cat">
+      <div class="skill-cat-head">
+        <span class="skill-cat-name">AI-Assisted Dev</span>
+        <span class="skill-cat-num">/05</span>
+      </div>
+      <ul class="skill-list">
+        <li>Claude <span><span class="lvl">daily driver</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i></span></span></li>
+        <li>ChatGPT <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>Cursor IDE <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>AI Test Gen <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+      </ul>
+    </div>
+
+    <div class="skill-cat">
+      <div class="skill-cat-head">
+        <span class="skill-cat-name">Foundations</span>
+        <span class="skill-cat-num">/06</span>
+      </div>
+      <ul class="skill-list">
+        <li>OOP <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>Agile / Scrum <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>SDLC / STLC <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+        <li>Defect Lifecycle <span><span class="lvl">strong</span><span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span></span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 100px;" class="reveal">
+    <div class="section-num" style="margin-bottom: 32px;">[05] — Recognition</div>
+    <div class="awards-row">
+      <div class="award">
+        <span class="award-from">UST Global · Internal Award</span>
+        <h4 class="award-title">Shining Star</h4>
+        <p class="award-desc">Recognised for consistent quality, ownership and team collaboration during the project tenure at UST Global.</p>
+      </div>
+      <div class="award">
+        <span class="award-from">UST Global · Internal Award</span>
+        <h4 class="award-title">Rising Star</h4>
+        <p class="award-desc">Awarded for early impact, fast ramp-up and going beyond brief on functional and regression test ownership.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-ticker t1">— let's build something —</div>
+  <div class="contact-ticker t2">/* and break it together */</div>
+
+  <div>
+    <div class="contact-eyebrow">[ 06 ] — The handshake</div>
+    <h2 class="contact-headline">
+      <span class="word">Let's</span> <span class="word it">make</span><br>
+      <span class="word">something</span><br>
+      <span class="word accent">unbreakable.</span>
+    </h2>
+
+    <div class="contact-cta">
+      <a class="email-link" href="mailto:abhinavselvarajan@gmail.com">
+        abhinavselvarajan@gmail.com
+        <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="contact-bottom">
+      <div class="contact-col">
+        <h5>Email</h5>
+        <a href="mailto:abhinavselvarajan@gmail.com">abhinavselvarajan@gmail.com</a>
+      </div>
+      <div class="contact-col">
+        <h5>Phone</h5>
+        <a href="tel:+917025352698">+91 70253 52698</a>
+      </div>
+      <div class="contact-col">
+        <h5>Elsewhere</h5>
+        <a href="https://in.linkedin.com/in/abhinav-selvarajan" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/esenopetra" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.instagram.com/soy_pensador_" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+      <div class="contact-col">
+        <h5>Comments</h5>
+        <form
+          class="comment-form"
+          id="portfolioCommentForm"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSd1dpZXvG3QbXRnd7vLfamLNhzgXh-sFaXQIuporxlTbedhcw/formResponse"
+          method="POST"
+          target="commentSubmitFrame"
+        >
+          <textarea
+            class="comment-input"
+            name="entry.50640457"
+            placeholder="Share your feedback about this portfolio..."
+            required
+          ></textarea>
+          <button class="comment-submit" type="submit">Submit</button>
+          <p class="comment-status" id="commentStatus"></p>
+          <input type="hidden" name="fvv" value="1" />
+          <input type="hidden" name="pageHistory" value="0" />
+        </form>
+        <iframe
+          title="Comment submission target"
+          name="commentSubmitFrame"
+          style="display: none;"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="contact-foot">
+      <span>© 2026 Abhinav Selvarajan</span>
+      <span>Designed &amp; built — Kannur, IN</span>
+      <span>v1.0 — Last update Nov 2026</span>
+    </div>
+  </div>
+</section>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
